@@ -1,5 +1,5 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,19 +7,41 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Local environment files
 *.local
+.env
+.env.*.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+.vscode/
+!.vscode/extensions.json   # Garde la config d'extensions recommandées
+.idea/
+
+# macOS files
 .DS_Store
+
+# Visual Studio files
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+
+# Swap files
 *.sw?
-.env
+
+# Supabase local config (ajoute si tu utilises supabase CLI)
+.supabase/
+supabase/.temp/
+
+# Vite cache (optionnel)
+.vite/
+
+# Autres dossiers temporaires spécifiques à ton projet
+.bolt/
